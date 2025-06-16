@@ -31,7 +31,7 @@
     <script src="{{ $js.Permalink }}"></script>
 {{ else }}
     {{ $js := $js | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $js.Permalink }}" integrity="" crossorigin="anonymous"></script>
+    <script src="{{ $js.Permalink }}" crossorigin="anonymous"></script>
 {{ end }}
 
 {{ if isset .Site.Params "js_modules" }}
